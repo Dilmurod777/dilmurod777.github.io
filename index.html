@@ -65,8 +65,8 @@
   }
 
 
-  .cv { margin: .9rem 0 0; font-size: .95rem; }
-  .cv a { text-decoration-color: var(--accent); }
+  .cv { margin: 1.2rem 0 0; font-size: 1rem; font-weight: 600; }
+  .cv a { text-decoration-color: var(--accent); text-underline-offset: .22em; }
 
   /* the one interactive thing */
   .sandbox {
@@ -105,15 +105,15 @@
     border-bottom: 1px solid var(--rule);
     font-family: var(--mono);
     font-size: .76rem;
-    animation: in .16s ease-out;
   }
+  .log li.new { animation: in .16s ease-out; }
   .log li:last-child { border-bottom: 0; }
   .verdict { font-weight: 500; }
   .admit { color: var(--ok); }
   .refuse { color: var(--accent); }
   .why { grid-column: 2; color: var(--muted); }
   @keyframes in { from { opacity: 0; } to { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) { .log li { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .log li.new { animation: none; } }
 
   section { margin-top: 3.6rem; }
   h2 {
@@ -294,6 +294,7 @@
       document.querySelectorAll(".cmd").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
       btn.setAttribute("aria-pressed", "true");
       const li = document.createElement("li");
+      li.className = "new";
       const v = document.createElement("span");
       v.className = "verdict " + r[0].toLowerCase();
       v.textContent = r[0];
