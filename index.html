@@ -199,7 +199,25 @@
     <h2>What I work on</h2>
     <p>A language model turns speech into a symbolic command. A deterministic validator checks that command against the twin's state, the procedure and the user's intent, and has exactly two outcomes: it runs, or it is refused with an explanation. The 2023 paper describes the framework; the 2026 one measures what happens when the validator is removed.</p>
     <p>I shipped web and mobile software in React, Next.js, Laravel and Flutter, and the research usually ends up as something that runs.</p>
-    <p class="quiet">In progress, in public: speech to a 3D twin in the browser, LLM serving benchmarks on one GPU, and retrieval scored against a hand-labelled set. Public data only.</p>
+    <p class="quiet">In progress, in public: retrieval scored against a hand-labelled set. Public data only.</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="entry">
+      <div class="when">2026</div>
+      <div>
+        <h3>voice-to-twin-gate</h3>
+        <p>Speech into the browser, a model that emits one symbolic action, a deterministic validator that admits or refuses it with a reason, and a Three.js twin that moves — or does not. <a class="doi" href="https://github.com/Dilmurod777/voice-to-twin-gate">Dilmurod777/voice-to-twin-gate</a></p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">2026</div>
+      <div>
+        <h3>llm-serving-bench</h3>
+        <p>One 8B model, one RTX 5090, one 200-prompt set, three serving stacks. At 32 concurrent requests vLLM reaches 1655 tok/s, llama.cpp 951 and Ollama 743 — 2.2× for the same weights on the same card. <a class="doi" href="https://github.com/Dilmurod777/llm-serving-bench">Dilmurod777/llm-serving-bench</a></p>
+      </div>
+    </div>
   </section>
 
   <section>
